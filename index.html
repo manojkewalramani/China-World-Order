@@ -7,7 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="styles.css?v=10">
+    <script src="vendor/d3.min.js"></script>
+    <script src="vendor/topojson-client.min.js"></script>
 </head>
 <body>
 
@@ -21,6 +23,7 @@
             <a href="#worldview">Worldview</a>
             <a href="#institutional">Institutional</a>
             <a href="#normative">Normative</a>
+            <a href="#ccd">CCD</a>
             <a href="#conclusion">Conclusion</a>
         </div>
         <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
@@ -33,6 +36,7 @@
         <a href="#worldview">Worldview</a>
         <a href="#institutional">Institutional</a>
         <a href="#normative">Normative</a>
+        <a href="#ccd">CCD</a>
         <a href="#conclusion">Conclusion</a>
     </div>
 </nav>
@@ -550,6 +554,60 @@
     </div>
 </section>
 
+<!-- CCD Section -->
+<section class="section" id="ccd">
+    <div class="container">
+        <div class="section-label">VI. Implementation on the Ground</div>
+        <h2 class="section-title">Progress Report on China's Community of Common Destiny</h2>
+
+        <div class="ccd-intro" data-animate>
+            <h3>What does Community of Common Destiny Mean?</h3>
+            <p>First articulated by Xi Jinping in 2013, the <strong>"Community with a Shared Future for Mankind"</strong> (sometimes translated as Community of Common Destiny, or CCD) is China's signature foreign policy concept — a vision of a world where nations' interests, security, and development are interwoven. It is framed as an alternative to what Beijing sees as a zero-sum, bloc-based liberal order.</p>
+            <p>Officially, the Chinese government has said that <strong>over 40 countries and regional organizations</strong> have partnered with China in establishing CCD mechanisms.</p>
+            <p class="ccd-intro-source">Source: <a href="https://www.fmprc.gov.cn/mfa_eng/wjbzhd/202603/t20260308_11870805.html" target="_blank" rel="noopener">Ministry of Foreign Affairs of the People's Republic of China</a></p>
+        </div>
+
+        <div class="ccd-map-wrap" data-animate>
+            <h3 class="ccd-section-h3">Global Network of Communities of Common Destiny</h3>
+            <p class="ccd-map-hint">Click any highlighted country to open its bilateral CCD source document. Regional groupings are listed below the map.</p>
+            <div class="ccd-legend">
+                <div class="ccd-legend-item"><span class="ccd-swatch ccd-swatch--bilateral"></span> Bilateral CCD</div>
+                <div class="ccd-legend-item"><span class="ccd-swatch ccd-swatch--regional"></span> Regional CCD member</div>
+                <div class="ccd-legend-item"><span class="ccd-swatch ccd-swatch--both"></span> Both bilateral &amp; regional</div>
+            </div>
+            <div id="ccdMap" class="ccd-map"></div>
+            <div id="ccdTooltip" class="ccd-tooltip"></div>
+        </div>
+
+        <div class="ccd-regional" data-animate>
+            <h3 class="ccd-section-h3">Seven Regional &amp; Multilateral CCDs</h3>
+            <div class="ccd-regional-grid">
+                <a href="https://www.fmprc.gov.cn/eng/xw/zyxw/202409/t20240905_11485719.html" target="_blank" rel="noopener" class="ccd-regional-card">
+                    <h4>China–Africa</h4>
+                </a>
+                <a href="https://www.fmprc.gov.cn/eng/xw/zyxw/202212/t20221210_10988653.html" target="_blank" rel="noopener" class="ccd-regional-card">
+                    <h4>China–Arab States</h4>
+                </a>
+                <a href="https://www.fmprc.gov.cn/mfa_eng/wjdt_665385/2649_665393/202505/t20250514_11620715.html" target="_blank" rel="noopener" class="ccd-regional-card">
+                    <h4>China–Latin America &amp; Caribbean</h4>
+                </a>
+                <a href="https://www.fmprc.gov.cn/eng/xw/zyxw/202206/t20220601_10697276.html" target="_blank" rel="noopener" class="ccd-regional-card">
+                    <h4>China–Pacific Island Countries</h4>
+                </a>
+                <a href="https://asean.org/asean-china-joint-statement-on-synergising-the-master-plan-on-asean-connectivity/" target="_blank" rel="noopener" class="ccd-regional-card">
+                    <h4>China–ASEAN</h4>
+                </a>
+                <a href="https://www.fmprc.gov.cn/eng/xw/zyxw/202312/t20231226_11214248.html" target="_blank" rel="noopener" class="ccd-regional-card">
+                    <h4>Lancang–Mekong Cooperation</h4>
+                </a>
+                <a href="https://www.fmprc.gov.cn/eng/xw/zyxw/202305/t20230519_11079112.html" target="_blank" rel="noopener" class="ccd-regional-card">
+                    <h4>China–Central Asia</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Analysts Widget -->
 <section class="section section--dark" id="analysts">
     <div class="container">
@@ -981,5 +1039,6 @@
 </template>
 
 <script src="script.js?v=3"></script>
+<script src="map.js?v=7"></script>
 </body>
 </html>
