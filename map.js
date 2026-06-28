@@ -34,6 +34,7 @@
         CUB: { name: 'Cuba', year: '2022', link: 'https://cubaminrex.cu/en/joint-statement-cuba-china', source: 'Cuba MINREX' },
         TLS: { name: 'Timor-Leste', year: '2024', link: 'https://www.gov.cn/yaowen/liebiao/202407/content_6964902.htm', source: 'GOV.CN' },
         ZMB: { name: 'Zambia', year: '2024', link: 'https://www.gov.cn/yaowen/liebiao/202409/content_6974442.htm', source: 'GOV.CN' },
+        BGD: { name: 'Bangladesh', year: '2026', link: 'https://www.mfa.gov.cn/mfa_eng/xw/zyxw/202606/t20260626_11953167.html', source: 'FMPRC' },
     };
 
     // Regional groupings — country ISO-3 lists (member states)
